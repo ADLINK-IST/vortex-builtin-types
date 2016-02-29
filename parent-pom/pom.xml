@@ -67,4 +67,12 @@
             </plugins>
         </pluginManagement>
     </build>
+
+    <repositories>
+        <repository>
+            <id>prismtech-repo</id>
+            <name>PrismTech Maven repository</name>
+            <url>http://prismtech.github.io/mvn-repo/releases</url>
+        </repository>
+    </repositories>
 </project>
