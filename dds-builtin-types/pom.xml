@@ -6,7 +6,7 @@
 
     <parent>
         <groupId>com.prismtech.vortex</groupId>
-        <artifactId>parent-pom</artifactId>
+        <artifactId>builtin-parent-pom</artifactId>
         <version>0.8.0-SNAPSHOT</version>
         <relativePath>../parent-pom</relativePath>
     </parent>
