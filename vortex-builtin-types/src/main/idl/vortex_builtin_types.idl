@@ -1,0 +1,37 @@
+module vortex {
+    struct ShortKeyedString {
+        short key;
+        string value;
+    };
+    #pragma keylist ShortKeyedString key
+
+    struct LongKeyedString {
+        long key;
+        string value;
+    };
+    #pragma keylist LongKeyedString key
+
+    struct BooleanKeyedString {
+        boolean key;
+        string value;
+    };
+    #pragma keylist BooleanKeyedString key
+
+    struct ShortKeyedBytes {
+        short key;
+        sequence<octet> value;
+    };
+    #pragma keylist ShortKeyedBytes key
+
+    struct LongKeyedBytes {
+        long key;
+        sequence<octet> value;
+    };
+    #pragma keylist LongKeyedBytes key
+
+    struct BooleanKeyedBytes {
+        boolean key;
+        sequence<octet> value;
+    };
+    #pragma keylist BooleanKeyedBytes key
+};

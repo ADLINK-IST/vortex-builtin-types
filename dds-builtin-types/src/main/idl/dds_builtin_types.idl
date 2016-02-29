@@ -1,0 +1,32 @@
+module DDS {
+
+	struct _String {
+		string value;
+	};
+	#pragma keylist _String
+
+	struct KeyedString {
+		string key;
+		string value;
+	};
+	#pragma keylist KeyedString key
+
+	typedef sequence<KeyedString> KeyedStringSeq;
+
+	typedef sequence<octet> ByteSeq;
+	struct Bytes {
+		ByteSeq value;
+	};
+	#pragma keylist Bytes
+
+	typedef sequence<Bytes> BytesSeq;
+
+	struct KeyedBytes {
+		string key;
+		ByteSeq value;
+	};
+	#pragma keylist KeyedBytes key
+
+	typedef sequence<KeyedBytes> KeyedBytesSeq;
+
+};

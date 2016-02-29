@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+                                Vortex Web
+
+       This software and documentation are Copyright 2010 to 2015 PrismTech
+       Limited and its licensees. All rights reserved. See file:
+
+                              docs/LICENSE.html
+
+       for full copyright notice and license terms.
+
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.prismtech.vortex</groupId>
+    <artifactId>parent-pom</artifactId>
+    <version>0.7.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <vortex-cafe-version>2.1.1</vortex-cafe-version>
+
+        <maven-dependency-plugin-version>2.6</maven-dependency-plugin-version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- Vortex Cafe -->
+            <dependency>
+                <groupId>com.prismtech.cafe</groupId>
+                <artifactId>cafe</artifactId>
+                <version>${vortex-cafe-version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <!-- Configure Maven to target Java 1.8 -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                    </configuration>
+                </plugin>
+
+                <!-- For dependencies management -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version>${maven-dependency-plugin-version}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>com.prismtech.cafe</groupId>
+                    <artifactId>idl2j</artifactId>
+                    <version>${vortex-cafe-version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
